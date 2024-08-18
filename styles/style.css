@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&family=New+Amsterdam&display=swap');
+
+
+:root{
+    --cor-primaria: #191A19;
+    --cor-secundaria: #1E5128;
+    --cor-terciaria: #4E9F3D;
+    --cor-fundo: #D8E9A8;
+    --cor-gray: #232D3F;
+    --cor-branco: #fff;     
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    height: 100%;
+    background-color: var(--cor-primaria);
+    box-sizing: border-box;
+   
+}
+
+.apresentacao{
+    display: flex;
+    justify-content: space-between; /* Centraliza horizontalmente */
+    align-items: center;/* Centraliza verticalmente */
+    padding: 1% 8%;
+    gap: 8px;
+    height: 90vh;
+    
+}
+
+.esquerda, 
+.direita {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.esquerda{
+    background-color:var(--cor-primaria);
+    width: 80%;
+    gap: 16px;
+    align-items: flex-start;
+    border-radius: 32px;
+    border: 10px solid var(--cor-secundaria);
+    
+}
+
+.entradaTexto{
+    width: 80%;
+    color: var(--cor-fundo);
+    margin: 5rem 0 35rem 5rem;
+    font-size: 2rem;
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 200;
+}
+
+
+.entradaTexto::placeholder {
+    color: #fff; /* Define o placeholder como branco */
+}
+
+
+.informacao__esquerda{
+    font-size: 1.25rem;
+    text-align: center;
+    
+}
+
+.img_txt{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color: var(--cor-fundo);
+    
+    
+}
+
+.img_txt img {
+    padding: 0 1% 0 7%;
+    
+    
+    
+}
+
+.apresentacao__btn__esquerda{
+    display: flex;
+    gap: 24px;
+    padding: 0% 0 2% 7%;
+    
+    
+}
+
+
+.apresentacao__btn__esquerda__criptografar,
+.apresentacao__btn__esquerda__descriptografar,
+.copiar{
+    border: 5px solid var(--cor-fundo);
+    width: 20.5rem;
+    height: 4.2rem;
+    border-radius: 24px;
+    font-size: 24px;
+}
+
+.apresentacao__btn__esquerda__criptografar{
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+}
+
+.apresentacao__btn__esquerda__criptografar:hover{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    
+}
+
+.apresentacao__btn__esquerda__descriptografar{
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+}
+
+.apresentacao__btn__esquerda__descriptografar:hover{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+}
+
+
+
+.imagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.direita{
+    background-color: var(--cor-primaria);
+    box-sizing: border-box;
+    width: 40%;
+    height: 53rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    border: 10px solid var(--cor-secundaria);
+    padding: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+   
+    
+}
+
+.imagem{
+    align-self: center;
+    max-width: 100%;
+    
+}
+
+
+.textArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.msg__Final{
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "New Amsterdam", sans-serif;
+    width: 100%;
+    color: var(--cor-fundo);
+    display: flex;
+    
+
+
+}
+
+.msg__Final::placeholder {
+    color: #fff; /* Define o placeholder como branco */
+    display: flex;
+    justify-content: center;
+}
+
+.info_direita{
+    font-size: 20px;
+    color: var(--cor-fundo);
+    text-align: center;
+    margin-top: 16px;
+}
+
+.copiar{
+    /*display: none;*/
+    width: 100%;
+    background: transparent;
+    color: var(--cor-fundo);
+
+}
+
+.oculto{
+    display: none;
+}
+
+
+footer{
+    background-color: var(--cor-branco);
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+@media(max-width:1174px){
+    .apresentacao{
+        
+        flex-direction: column;
+        gap: 64px; 
+
+    }
+
+    .imagem{
+        display: none;
+    }
+
+    .esquerda{
+        width: 100%;
+
+    }
+
+    .direita{
+        width: 100%;
+    }
+
+
+    .img_txt{
+        justify-content: center;
+    }
+
+    .apresentacao__btn__esquerda{
+        
+        align-self: center;
+        
+    }
+
+    .apresentacao__btn__esquerda__criptografar,
+    .apresentacao__btn__esquerda__descriptografar,
+    .copiar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18vw; /* Largura em função da viewport */
+        height: 3.5rem; /* Ajuste a altura conforme necessário */
+        font-size: 1.25rem; /* Tamanho da fonte menor */
+
+    }
+
+   
+
+    footer{
+        display: none; 
+    }
+
+
+}
+
+@media(max-width:933px){
+    .apresentacao{
+        
+        flex-direction: column;
+        gap: 64px; 
+
+    }
+
+    .imagem{
+        display: none;
+    }
+
+    .esquerda{
+        width: 100%;
+
+    }
+
+    .direita{
+        width: 100%;
+    }
+
+    .img_txt{
+        justify-content: center;
+    }
+
+    .apresentacao__btn__esquerda{
+        
+        align-self: center;
+        
+    }
+
+    .apresentacao__btn__esquerda__criptografar,
+    .apresentacao__btn__esquerda__descriptografar,
+    .copiar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18vw; /* Largura em função da viewport */
+        height: 3.5rem; /* Ajuste a altura conforme necessário */
+        font-size: 1.25rem; /* Tamanho da fonte menor */
+    }
+
+   
+
+    footer{
+        display: none; 
+    }
+
+}
